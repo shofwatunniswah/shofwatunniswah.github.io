@@ -2,10 +2,12 @@
     font-family: "brightRetro";
     src: url(fonts/brightRetro.otf);
 }
-.icon{
-    width : 80%
+
+.icon {
+    width: 80%
 }
-.brand{
+
+.brand {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Nerko One', cursive;
     font-family: 'Nunito', sans-serif;
@@ -13,44 +15,188 @@
     text-align: center;
     font-weight: 600;
 }
-.text-navbar{
+
+.text-navbar {
     font-family: 'Nunito', cursive;
     text-decoration: none;
     color: black;
     font-weight: 400;
 }
-.pic-carousel{
+
+.pic-carousel {
     width: 100vw;
     height: 75vh;
     object-fit: cover;
 }
-.subtitle{
+
+.subtitle-light {
     font-family: brightRetro;
     font-size: 70px;
-    color: rgb(248,238,219);
-    text-shadow: 2px 2px rgb(200,139,133);
+    color: rgb(248, 238, 219);
+    text-shadow: 2px 2px rgb(200, 139, 133);
     text-align: center;
 }
-.imgCard{
+
+.subtitle-dark {
+    font-family: brightRetro;
+    font-size: 70px;
+    color: rgb(230, 188, 182);
+    text-shadow: 2px 2px rgb(200, 139, 133);
+    text-align: center;
+}
+
+.imgCard {
     height: 300px;
     object-fit: fill;
 }
+
 body {
     overflow-x: hidden;
 }
-.shapebox{
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border-radius: 20px;
+
+.boxlink {
+    max-width: 500px;
+    height: 490px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
 }
-.button{
-    background-color:transparent;
+
+.button {
+    background-color: transparent;
     font-family: 'Nunito', sans-serif;
     border-radius: 10px;
     border-style: dotted;
 }
-.item:hover{
+
+.item:hover {
     transform: scale(1.05);
 }
+
+.h4 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.boxlink>img {
+    max-width: 354px;
+}
+
+.headline {
+    font-family: brightRetro;
+    color: rgb(230, 188, 182);
+    text-align: left;
+    font-size: 100px;
+    color: rgb(230, 188, 182);
+    text-shadow: 2px 2px rgb(200, 139, 133);
+}
+
+.verticalAlign {
+    margin-top: 25%;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: block;
+}
+
+.mapbox {
+    border: 0;
+    width: 30vw;
+    height: 30vh;
+    border-radius: 5px;
+}
+
+.alignRight {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.shofie-backgLight {
+    background-color: rgb(242, 237, 228);
+}
+
+.shofie-backgDark {
+    background-color: rgb(230, 188, 182);
+}
+
+.ornaments {
+    background-image: url(ornaments.png);
+    background-repeat: no-repeat;
+    background-position: right top
+}
+
+.shofie-stars {
+    background-image: url(stars.png);
+    width: 100%;
+}
+
+.shofie-conCarousel {
+    background-color: rgb(242, 237, 228);
+    width: 80%;
+    border-radius: 10px;
+}
+
+.shofie-profilePic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.shofie-label {
+    width: 80%;
+}
+
+.form-container {
+    width: 50%;
+    margin: auto;
+    /* padding: 2%; */
+  }
+  label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border : 0;
+    border-radius: 5px;
+  }
+  .buttonSubmit {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    color: #fff;
+    background: rgb(230, 188, 182);
+    line-height: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    border: 0px;
+    transition: color .4s ease-out, background .4s ease-out;
+  }
+  .button:hover {
+    background: rgb(200, 139, 133);
+    transform:scale(1.02);
+  }
+  .errors {
+    display: block;
+    color: red;
+    margin-top: 5px;
+  }
+  .error {
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    box-shadow: 0 0 15px 0 rgba(255,36,0,1);
+  }
