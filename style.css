@@ -1,0 +1,164 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hero-section {
+  background:
+    radial-gradient(circle at top left, rgba(242, 201, 76, 0.22), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(193, 18, 31, 0.12), transparent 32%),
+    #ffffff;
+}
+
+.hero-orb,
+.contact-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(56px);
+  pointer-events: none;
+}
+
+.hero-orb-left {
+  left: 0;
+  top: 5rem;
+  width: 10rem;
+  height: 10rem;
+  background: rgba(242, 201, 76, 0.28);
+}
+
+.hero-orb-right {
+  right: 0;
+  top: 2.5rem;
+  width: 12rem;
+  height: 12rem;
+  background: rgba(193, 18, 31, 0.14);
+}
+
+.contact-orb-left {
+  left: 0;
+  top: 0;
+  width: 11rem;
+  height: 11rem;
+  background: rgba(193, 18, 31, 0.22);
+}
+
+.contact-orb-right {
+  right: 0;
+  bottom: 0;
+  width: 12rem;
+  height: 12rem;
+  background: rgba(242, 201, 76, 0.18);
+}
+
+.primary-cta,
+.wa-button,
+.floating-wa {
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+.primary-cta:hover,
+.wa-button:hover,
+.floating-wa:hover {
+  transform: translateY(-2px);
+  background-color: #8e0e18;
+}
+
+.product-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 28px 55px -28px rgba(17, 17, 17, 0.28);
+  border-color: rgba(193, 18, 31, 0.12);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.15rem;
+  width: 0;
+  height: 2px;
+  border-radius: 9999px;
+  background: #c1121f;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  width: 100%;
+}
+
+.faq-item {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -24px rgba(17, 17, 17, 0.28);
+}
+
+.faq-icon {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item.is-open .faq-icon {
+  background: #c1121f;
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+.faq-item.is-open .faq-trigger {
+  border-left: 4px solid #f2c94c;
+}
+
+.faq-content {
+  animation: fadeSlide 0.28s ease;
+}
+
+.floating-wa {
+  animation: pulseFloat 2.6s ease-in-out infinite;
+}
+
+.floating-wa.is-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseFloat {
+  0%,
+  100% {
+    box-shadow: 0 18px 45px -18px rgba(193, 18, 31, 0.48);
+  }
+
+  50% {
+    box-shadow: 0 24px 52px -16px rgba(193, 18, 31, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-item.is-open .faq-trigger {
+    border-left-width: 3px;
+  }
+}
