@@ -103,12 +103,28 @@ function updateFloatingWaVisibility() {
   }
 }
 
+function updateNavbarState() {
+  if (!header) {
+    return;
+  }
+
+  if (window.scrollY <= 40) {
+    header.classList.add("nav-transparent");
+    header.classList.remove("nav-scrolled");
+  } else {
+    header.classList.remove("nav-transparent");
+    header.classList.add("nav-scrolled");
+  }
+}
+
 window.addEventListener("scroll", () => {
   updateActiveNavLink();
   updateFloatingWaVisibility();
+  updateNavbarState();
 });
 
 window.addEventListener("load", () => {
   updateActiveNavLink();
   updateFloatingWaVisibility();
+  updateNavbarState();
 });

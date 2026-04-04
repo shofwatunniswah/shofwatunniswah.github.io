@@ -12,18 +12,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-white font-['Plus_Jakarta_Sans',sans-serif] text-[#111111] antialiased">
-  <header id="site-header" class="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur overflow-hidden">
+  <header id="site-header" class="nav-transparent fixed left-0 top-0 z-50 w-full overflow-hidden">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
       <a href="#home" class="flex items-center gap-3">
         <span class="flex h-11 w-11 items-center justify-center rounded-2xl text-sm font-extrabold text-white shadow-lg shadow-black/10">
-          <img src="images/logo.png">
+          <img src="images/logo.png" alt="Doni's Catridge" class="site-logo">
         </span>
         <div>
-          <p class="font-['Sora',sans-serif] text-lg font-bold leading-none text-[#111111]">Doni's Catridge</p>
-          <p class="text-xs font-medium uppercase tracking-[0.24em] text-[#C1121F]">Jual Beli Cartridge Bekas</p>
+          <p class="site-title font-['Sora',sans-serif] text-lg font-bold leading-none text-[#111111]">Doni's Catridge</p>
+          <p class="site-subtitle text-xs font-medium uppercase tracking-[0.24em] text-[#C1121F]">Jual Beli Cartridge Bekas</p>
         </div>
       </a>
-      <button id="menu-toggle" class="inline-flex items-center justify-center rounded-xl border border-black/10 p-2 text-[#111111] transition hover:border-[#C1121F] hover:text-[#C1121F] lg:hidden" aria-label="Buka menu" aria-expanded="false">
+      <button id="menu-toggle" class="menu-toggle inline-flex items-center justify-center rounded-xl border border-black/10 p-2 text-[#111111] transition hover:border-[#C1121F] hover:text-[#C1121F] lg:hidden" aria-label="Buka menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </button>
       <div class="hidden items-center gap-8 lg:flex">
@@ -91,37 +91,6 @@
       </div>
 
 </section>
-
-    <section class="brand-strip border-y border-black/5 bg-white">
-      <div class="mx-auto max-w-7xl px-6 py-8 lg:px-8">
-        <div class="mb-5 flex items-center gap-3">
-          <span class="h-2.5 w-2.5 rounded-full bg-[#C1121F]"></span>
-          <p class="text-sm font-bold uppercase tracking-[0.26em] text-[#111111]">Brand Tersedia</p>
-        </div>
-        <div class="brand-marquee">
-          <div class="brand-track">
-            <div class="brand-item">
-              <img src="logo_brand/canon.png" alt="Canon" class="brand-logo">
-            </div>
-            <div class="brand-item">
-              <img src="logo_brand/HP.png" alt="HP" class="brand-logo">
-            </div>
-            <div class="brand-item">
-              <img src="logo_brand/Epson.png" alt="Epson" class="brand-logo">
-            </div>
-            <div class="brand-item">
-              <img src="logo_brand/canon.png" alt="Canon" class="brand-logo">
-            </div>
-            <div class="brand-item">
-              <img src="logo_brand/HP.png" alt="HP" class="brand-logo">
-            </div>
-            <div class="brand-item">
-              <img src="logo_brand/Epson.png" alt="Epson" class="brand-logo">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="tentang" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
       <div class="grid items-center gap-12 lg:grid-cols-2">
