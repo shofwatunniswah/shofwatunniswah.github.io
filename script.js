@@ -139,3 +139,12 @@ window.addEventListener("load", () => {
   updateFloatingWaVisibility();
   updateNavbarState();
 });
+
+function waParfum() {
+  const message =
+    "Halo, saya mau jual botol parfum bekas (Eau de Parfum / Eau de Toilette). Apakah masih menerima?";
+
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+}
