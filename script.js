@@ -10,7 +10,11 @@ const header = document.getElementById("site-header");
 waButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const productName = button.dataset.product;
-    const message = `Halo, saya tertarik dengan produk ${productName}, apakah masih tersedia?`;
+    const action = button.dataset.action;
+    const message =
+      action === "jual"
+        ? `Halo, saya ingin menjual produk ${productName}. Apakah Doni's Catridge menerima produk ini?`
+        : `Halo, saya tertarik untuk membeli produk ${productName}, apakah masih tersedia?`;
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   });
@@ -59,11 +63,15 @@ navLinks.forEach((link) => {
 
     event.preventDefault();
     const headerOffset = header ? header.offsetHeight : 0;
-    const top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset + 1;
+    const top =
+      target.getBoundingClientRect().top +
+      window.pageYOffset -
+      headerOffset +
+      1;
 
     window.scrollTo({
       top,
-      behavior: "smooth"
+      behavior: "smooth",
     });
 
     if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
@@ -87,7 +95,10 @@ function updateActiveNavLink() {
   });
 
   navLinks.forEach((link) => {
-    link.classList.toggle("is-active", link.getAttribute("href") === `#${currentSection}`);
+    link.classList.toggle(
+      "is-active",
+      link.getAttribute("href") === `#${currentSection}`,
+    );
   });
 }
 
