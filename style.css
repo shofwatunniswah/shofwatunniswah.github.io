@@ -127,6 +127,54 @@ body {
   border-color: rgba(193, 18, 31, 0.12);
 }
 
+.brand-strip {
+  position: relative;
+}
+
+.brand-marquee {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.brand-track {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: max-content;
+  animation: brandScroll 18s linear infinite;
+}
+
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  height: 96px;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fff8e8 100%);
+  box-shadow: 0 18px 40px -28px rgba(17, 17, 17, 0.22);
+}
+
+.brand-strip .brand-logo {
+  max-height: 44px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.78;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+.brand-item:hover .brand-logo {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
 .nav-link {
   position: relative;
 }
@@ -205,6 +253,16 @@ body {
 
   50% {
     box-shadow: 0 24px 52px -16px rgba(193, 18, 31, 0.3);
+  }
+}
+
+@keyframes brandScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
   }
 }
 
