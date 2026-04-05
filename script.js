@@ -7,19 +7,30 @@ const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 const floatingWa = document.getElementById("floating-wa");
 const header = document.getElementById("site-header");
 
+
+/* ===============================
+   WHATSAPP BUTTON
+================================= */
 waButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const productName = button.dataset.product;
     const action = button.dataset.action;
+
     const message =
       action === "jual"
-        ? `Halo, saya ingin menjual produk ${productName}. Apakah Doni's Catridge menerima produk ini?`
+        ? `Halo, saya ingin menjual produk ${productName}. Apakah Doni's Cartridge menerima produk ini?`
         : `Halo, saya tertarik untuk membeli produk ${productName}, apakah masih tersedia?`;
+
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
     window.open(url, "_blank");
   });
 });
 
+
+/* ===============================
+   FAQ ACCORDION
+================================= */
 faqItems.forEach((item) => {
   const trigger = item.querySelector(".faq-trigger");
   const content = item.querySelector(".faq-content");
@@ -44,6 +55,10 @@ faqItems.forEach((item) => {
   });
 });
 
+
+/* ===============================
+   MOBILE MENU
+================================= */
 if (menuToggle && mobileMenu) {
   menuToggle.addEventListener("click", () => {
     const expanded = menuToggle.getAttribute("aria-expanded") === "true";
@@ -52,16 +67,19 @@ if (menuToggle && mobileMenu) {
   });
 }
 
+
+/* ===============================
+   SMOOTH SCROLL
+================================= */
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     const targetId = link.getAttribute("href");
     const target = document.querySelector(targetId);
 
-    if (!target) {
-      return;
-    }
+    if (!target) return;
 
     event.preventDefault();
+
     const headerOffset = header ? header.offsetHeight : 0;
     const top =
       target.getBoundingClientRect().top +
@@ -81,6 +99,10 @@ navLinks.forEach((link) => {
   });
 });
 
+
+/* ===============================
+   ACTIVE NAV LINK
+================================= */
 const sectionIds = ["home", "tentang", "katalog", "faq", "kontak"];
 
 function updateActiveNavLink() {
@@ -97,15 +119,17 @@ function updateActiveNavLink() {
   navLinks.forEach((link) => {
     link.classList.toggle(
       "is-active",
-      link.getAttribute("href") === `#${currentSection}`,
+      link.getAttribute("href") === `#${currentSection}`
     );
   });
 }
 
+
+/* ===============================
+   FLOATING WA
+================================= */
 function updateFloatingWaVisibility() {
-  if (!floatingWa) {
-    return;
-  }
+  if (!floatingWa) return;
 
   if (window.scrollY < 180) {
     floatingWa.classList.add("is-hidden");
@@ -114,10 +138,12 @@ function updateFloatingWaVisibility() {
   }
 }
 
+
+/* ===============================
+   NAVBAR SCROLL STATE
+================================= */
 function updateNavbarState() {
-  if (!header) {
-    return;
-  }
+  if (!header) return;
 
   if (window.scrollY <= 40) {
     header.classList.add("nav-transparent");
@@ -127,6 +153,7 @@ function updateNavbarState() {
     header.classList.add("nav-scrolled");
   }
 }
+
 
 window.addEventListener("scroll", () => {
   updateActiveNavLink();
@@ -139,3 +166,16 @@ window.addEventListener("load", () => {
   updateFloatingWaVisibility();
   updateNavbarState();
 });
+
+
+/* ===============================
+   WA PARFUM FUNCTION (NEW)
+================================= */
+function waParfum() {
+  const message =
+    "Halo, saya mau jual botol parfum bekas (Eau de Parfum / Eau de Toilette). Apakah masih menerima?";
+
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+}
