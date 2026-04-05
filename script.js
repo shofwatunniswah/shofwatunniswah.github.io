@@ -6,6 +6,9 @@ const mobileMenu = document.getElementById("mobile-menu");
 const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 const floatingWa = document.getElementById("floating-wa");
 const header = document.getElementById("site-header");
+const catalogCards = document.querySelectorAll("#catalog-grid .product-card");
+const catalogToggle = document.getElementById("catalog-toggle");
+const initialCatalogLimit = 6;
 
 
 /* ===============================
@@ -26,6 +29,36 @@ waButtons.forEach((button) => {
     window.open(url, "_blank");
   });
 });
+
+
+/* ===============================
+   CATALOG TOGGLE
+================================= */
+function updateCatalogVisibility(expanded = false) {
+  if (!catalogCards.length || !catalogToggle) return;
+
+  catalogCards.forEach((card, index) => {
+    card.classList.toggle("hidden", !expanded && index >= initialCatalogLimit);
+  });
+
+  catalogToggle.textContent = expanded
+    ? "Tampilkan Lebih Sedikit"
+    : "Lihat Produk Lainnya";
+  catalogToggle.setAttribute("aria-expanded", String(expanded));
+}
+
+if (catalogToggle && catalogCards.length) {
+  if (catalogCards.length <= initialCatalogLimit) {
+    catalogToggle.classList.add("hidden");
+  } else {
+    updateCatalogVisibility(false);
+
+    catalogToggle.addEventListener("click", () => {
+      const expanded = catalogToggle.getAttribute("aria-expanded") === "true";
+      updateCatalogVisibility(!expanded);
+    });
+  }
+}
 
 
 /* ===============================

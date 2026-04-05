@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:mobile="http://www.mobile.googlebot.com/schemas/sitemap-mobile/1.0">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://yourdomain.com/</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Home Section -->
+  <url>
+    <loc>https://yourdomain.com/#home</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Tentang Kami Section -->
+  <url>
+    <loc>https://yourdomain.com/#tentang</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Katalog Section -->
+  <url>
+    <loc>https://yourdomain.com/#katalog</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/images/Canon88-98.jpg</image:loc>
+      <image:title>Cartridge Canon 88 98 original bekas layak pakai</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yourdomain.com/images/HP680.avif</image:loc>
+      <image:title>Cartridge HP 680 Black original bekas murah</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yourdomain.com/images/HP802.avif</image:loc>
+      <image:title>Cartridge HP 802 Black original bekas hitam</image:title>
+    </image:image>
+  </url>
+
+  <!-- FAQ Section -->
+  <url>
+    <loc>https://yourdomain.com/#faq</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Kontak Section -->
+  <url>
+    <loc>https://yourdomain.com/#kontak</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Produk Lainnya Section -->
+  <url>
+    <loc>https://yourdomain.com/#produk-lainnya</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/images/botol-parfume.png</image:loc>
+      <image:title>Botol parfum bekas Eau de Parfum dan Eau de Toilette original</image:title>
+    </image:image>
+  </url>
+
+</urlset>

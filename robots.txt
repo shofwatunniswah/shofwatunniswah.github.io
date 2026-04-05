@@ -1,0 +1,28 @@
+# Robots.txt for Doni's Cartridge
+# Disallow private areas and non-essential pages
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Crawl delay for slow bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Google-specific rules
+User-agent: Googlebot
+Allow: /
+
+# Allow indexing of sitemap
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Allow all other bots by default
+User-agent: *
+Allow: /
