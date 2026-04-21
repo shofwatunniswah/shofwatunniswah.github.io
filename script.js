@@ -1,4 +1,4 @@
-const whatsappNumber = "6281234567890";
+const whatsappNumber = "6287797604269";
 const waButtons = document.querySelectorAll(".wa-button");
 const faqItems = document.querySelectorAll(".faq-item");
 const menuToggle = document.getElementById("menu-toggle");
