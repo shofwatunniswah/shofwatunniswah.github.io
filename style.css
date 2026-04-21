@@ -25,6 +25,27 @@ body {
   color: #ffffff;
 }
 
+#site-header .site-title,
+#site-header .site-subtitle {
+  transition: opacity 0.3s ease, transform 0.3s ease, max-width 0.3s ease;
+}
+
+#site-header.nav-transparent .site-title,
+#site-header.nav-transparent .site-subtitle {
+  opacity: 0;
+  transform: translateX(-8px);
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#site-header.nav-scrolled .site-title,
+#site-header.nav-scrolled .site-subtitle {
+  opacity: 1;
+  transform: translateX(0);
+  max-width: 14rem;
+}
+
 #site-header.nav-transparent .menu-toggle {
   border-color: rgba(255, 255, 255, 0.28);
 }
